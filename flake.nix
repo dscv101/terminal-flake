@@ -5,10 +5,12 @@
 
     # Useful CLI programs
     cli.url = "github:xvrqt/cli-flake";
+    neovim.url = "github:xvrqt/neovim-flake";
   };
 
   outputs = {
     cli,
+    neovim,
     nixpkgs,
     flake-utils,
     ...
@@ -21,6 +23,8 @@
           imports = [
             # CLI Programs, Shell Configurations, Starship, ...
             cli.homeManagerModules.default
+            # Extremely customized NeoVim
+            neovim.homeManagerModules.${system}.default
             # List of useful fonts
             (import ./fonts.nix {inherit pkgs;})
           ];
