@@ -165,11 +165,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1725388949,
-        "narHash": "sha256-kIQdK9hwe5FZX3sqcLcvtBQR8cMOPprSv1udk/KBqKM=",
+        "lastModified": 1725484884,
+        "narHash": "sha256-k2yRbWjHWA3uzBIE/4XcOrGdTPvxtvhtTAPHmCJh3sc=",
         "owner": "xvrqt",
         "repo": "neovim-flake",
-        "rev": "c6647de8c35bbd1e85a6884d2a89477272730550",
+        "rev": "03e90f031fcb32eec44ceac532c39498ad695886",
         "type": "github"
       },
       "original": {
