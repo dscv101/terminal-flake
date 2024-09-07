@@ -32,12 +32,16 @@
           # Enable our terminal emulator
           programs.alacritty = {
             enable = true;
+            settings = {
+              import = ["/home/amy/.config/alacritty/theme.toml"];
+              shell.args = ["--login"];
+              shell.program = "${pkgs.zsh}/bin/zsh";
+            };
           };
 
           # Configure and style Alacritty
           home = {
             file = {
-              ".config/alacritty/alacritty.yml".source = ./alacritty.yml;
               ".config/alacritty/theme.yml".source = ./themes/catppuccin-mocha.yml;
             };
           };
