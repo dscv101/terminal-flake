@@ -34,9 +34,11 @@
           programs.alacritty = {
             enable = true;
             settings = {
-              import = ["/home/amy/.config/alacritty/theme.toml"];
-              shell.args = ["--login"];
-              shell.program = "${pkgs.zsh}/bin/zsh";
+              general.import = ["/home/amy/.config/alacritty/theme.toml"];
+              terminal = {
+                shell.args = ["--login"];
+                shell.program = "${pkgs.zsh}/bin/zsh";
+              };
             };
           };
 
