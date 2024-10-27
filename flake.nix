@@ -4,7 +4,8 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     # Useful CLI programs
-    cli.url = "github:xvrqt/cli-flake";
+    cli.url = "/home/xvrqt/dev/cli-flake";
+    #cli.url = "github:xvrqt/cli-flake";
     neovim.url = "/home/xvrqt/dev/neovim-flake";
     #neovim.url = "github:xvrqt/neovim-flake";
   };
