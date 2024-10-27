@@ -134,11 +134,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1730061770,
-        "narHash": "sha256-u24gUvI4PxiE0gHNrpHwVoUWDDrBq7EyZYhfH1Qt4o4=",
+        "lastModified": 1730061964,
+        "narHash": "sha256-6IufBbWVYV6dp88DkKLGRDZDWOjW90jAcBZX+rcSy4Y=",
         "ref": "refs/heads/master",
-        "rev": "033020bbbf5fc3873a35d433dcf8b9825ac1319d",
-        "revCount": 12,
+        "rev": "6b2b3deb8d24afbe603981ea9ae86dffbf5c64fc",
+        "revCount": 13,
         "type": "git",
         "url": "file:///home/xvrqt/dev/neovim-flake"
       },
