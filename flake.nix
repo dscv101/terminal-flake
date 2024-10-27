@@ -24,7 +24,7 @@
         maximal = {
           imports = [
             # CLI Programs, Shell Configurations, Starship, ...
-            cli.homeManagerModules.default
+            cli.homeManagerModules.${system}.default
             # Extremely customized NeoVim
             neovim.homeManagerModules.${system}.default
             # List of useful fonts
