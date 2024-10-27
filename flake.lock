@@ -134,17 +134,17 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1729264816,
-        "narHash": "sha256-wViJfHF2tRVA6lp8ts71Zi0/tBnymS65nnRmGg3xgw8=",
-        "owner": "xvrqt",
-        "repo": "neovim-flake",
-        "rev": "5f94890330c2ef62c43e38a1116790646d65e78c",
-        "type": "github"
+        "lastModified": 1730061770,
+        "narHash": "sha256-u24gUvI4PxiE0gHNrpHwVoUWDDrBq7EyZYhfH1Qt4o4=",
+        "ref": "refs/heads/master",
+        "rev": "033020bbbf5fc3873a35d433dcf8b9825ac1319d",
+        "revCount": 12,
+        "type": "git",
+        "url": "file:///home/xvrqt/dev/neovim-flake"
       },
       "original": {
-        "owner": "xvrqt",
-        "repo": "neovim-flake",
-        "type": "github"
+        "type": "git",
+        "url": "file:///home/xvrqt/dev/neovim-flake"
       }
     },
     "nil": {
