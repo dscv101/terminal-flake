@@ -1,2 +1,2 @@
-import:
+general.import:
   - ~/.config/alacritty/theme.yml
