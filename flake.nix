@@ -5,7 +5,8 @@
 
     # Useful CLI programs
     cli.url = "github:xvrqt/cli-flake";
-    neovim.url = "github:xvrqt/neovim-flake";
+    neovim.url = "/home/xvrqt/dev/neovim-flake";
+    #neovim.url = "github:xvrqt/neovim-flake";
   };
 
   outputs = {
