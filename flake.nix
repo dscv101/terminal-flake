@@ -33,7 +33,7 @@
           programs.alacritty = {
             enable = true;
             settings = {
-              general.import = ["/home/amy/.config/alacritty/theme.toml"];
+              general.import = ["/home/dscv/.config/alacritty/theme.toml"];
               terminal = {
                 shell.args = ["--login"];
                 shell.program = "${pkgs.zsh}/bin/zsh";
