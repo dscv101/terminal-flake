@@ -1,35 +1,20 @@
-# --- Push packages & devshells to the cachix binary cache service
-name: cachix push
+name: "Cachix"
 on:
-  workflow_dispatch: # allows manual triggering from the Actions UI
+  pull_request:
   push:
-    branches:
-      - main
 jobs:
-  cachix-push:
-    runs-on: "ubuntu-latest"
+  tests:
+    runs-on: ubuntu-latest
     steps:
-      - name: "Checking out repository..."
-        uses: actions/checkout@v4.2.2
-      - name: "Installing and configuring the nix package manager..."
-        uses: DeterminateSystems/nix-installer-action@main
-        with:
-          extra-conf: |
-            accept-flake-config = true
-            allow-import-from-derivation = true
-      - name: "Setting up magic-nix-cache..."
-        uses: DeterminateSystems/magic-nix-cache-action@main
-      - name: "Settings up cachix binary cache..."
-        uses: cachix/cachix-action@v15
-        with:
-          name: dscv101
-          # If you chose API tokens for write access OR if you have a private cache
-          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-      # NOTE Install any necessary packages here
-      - name: "Setting up packages..."
-        run: |
-          nix profile install nixpkgs#nix-fast-build # parallel nix builder
-      - name: "Running `nix build ...`..."
-        run: nix-fast-build --skip-cached --no-nom --flake ".#packages.$(nix eval --raw --impure --expr builtins.currentSystem)"
-      - name: "Running `nix develop...`..."
-        run: nix-fast-build --skip-cached --no-nom --flake ".#devShells.$(nix eval --raw --impure --expr builtins.currentSystem)"
+    - uses: actions/checkout@v4.2.2
+    - uses: cachix/install-nix-action@v30
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+    - uses: cachix/cachix-action@v15
+      with:
+        name: dscv101
+
+        # If you chose API tokens for write access OR if you have a private cache
+        authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+    - run: nix-build
+    - run: nix-shell --run "echo OK"
